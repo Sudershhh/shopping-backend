@@ -25,6 +25,9 @@ app.use('/api/cart',cartRoute)
 app.use('/api/orders',orderRoute)
 app.use("/api/checkout", stripeRoute);
 
+app.get('/',(req,res)=>{
+    res.status(200).send('Welcome to our Shopping site')
+})
 
 app.listen(port,()=>console.log('Server listening on port '+port))
 
